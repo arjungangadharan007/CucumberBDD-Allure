@@ -1,0 +1,17 @@
+{
+  "name": "bddworkspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.0.1",
+    "@playwright/test": "^1.47.1",
+    "@types/node": "^22.5.5",
+    "allure-playwright": "^3.0.0",
+    "playwright-bdd": "^7.4.0"
+  }
+}
