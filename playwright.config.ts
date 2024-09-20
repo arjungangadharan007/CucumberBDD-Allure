@@ -2,10 +2,15 @@ import { defineConfig, devices } from '@playwright/test';
 import { defineBddConfig } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
+  features: ['src/features/*.feature'],
+  paths: ['src/Steps/*.ts']
+})
 
-  paths : ['src/features/*.feature'],
-  require : ['src/Steps/*.ts'],
-});
+// const testDir = defineBddConfig({
+
+//   paths : ['src/features/*.feature'],
+//   require : ['src/Steps/*.ts'],
+// });
 
 /**
  * Read environment variables from file.
@@ -32,7 +37,7 @@ export default defineConfig({
   // reporter: [
   //   ['html',{open:'always'}]
   // ],
-  reporter : "allure-playwright",
+  reporter : [['html',{outputFile:'playwright-report\index.html'}]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
